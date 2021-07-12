@@ -1,0 +1,77 @@
+/* Estilos generales para box */
+.box{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px;
+    background-color: coral;  
+    color: #fff;
+   
+} 
+
+/* Cuando renderiza HTML */
+.box-renderiza{ 
+    transform: rotate(45deg);
+}
+p{
+    transform: rotate(-45deg);
+}
+/* Con hover */
+.box-hover{
+    transition: transform 2s;
+}
+.box-hover:hover{ 
+  /*  transform: scale(.2)*/
+  transform: scale(2);
+  transform-origin: 50% 0;
+  border: 1px solid red;
+}
+/* Con keyframes */
+.box-keyframe{ 
+     animation: caja 2s linear 1s infinite alternate;
+}  
+  
+@keyframes caja{
+    /*from to 0 a 100%*/
+    /* 0% a 100% cambio en el proceso */
+    from{
+        background-color: red;
+        transform: rotate(1turn);
+        border-radius: 50%;
+    }
+    to{
+        background-color: indianred;
+    }
+}
+/*transform: rotate, translate, skew, scale*/
+ .loader{
+     height: 40px;
+     width: 40px;
+     border: 8px solid transparent;
+     border-top-color: pink;
+     border-right-color: rgb(233, 223, 224);;
+     border-radius: 50%;
+     margin: 40% auto;
+     animation: rotation 1s linear infinite;
+ }
+ @keyframes rotation{
+ 0%{
+     transform: rotate(1turn);
+ }
+ }
+ a{
+     text-decoration:none;
+     transition: text-decoration 1s;
+     
+ }
+ div{
+     width:0;
+     transition: width 1s;
+ }
+ a:hover+div{
+     width: 50px;
+     height: 3px;
+     background-color: tomato;
+ }
